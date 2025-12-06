@@ -99,13 +99,11 @@ Time series analyses:
 **Notebook:** `04_prediction_models.ipynb`
 
 Model selection and rationale:
-- Comparison: Moving Average, SARIMA, LSTM, Prophet
-- Data suitability analysis
+- Data suitability analysis for seasonal patterns
 - Dataset size considerations
 
-**Selected Models:**
-- **SARIMA**: Primary model (ideal for medium-sized seasonal data)
-- **Moving Average**: Baseline comparison
+**Selected Model:**
+- **ARIMA**: Time series forecasting model for seasonal streaming patterns
 
 ## How to Run
 
@@ -133,14 +131,6 @@ jupyter notebook
    - `02_exploratory_data_analysis.ipynb` - Exploratory analysis
    - `03_temporal_analysis.ipynb` - Temporal analysis
    - `04_prediction_models.ipynb` - Predictive models
-
-### Image Extraction
-
-To extract and organize images from notebooks:
-
-```bash
-python extract_images.py
-```
 
 ## Key Results
 
@@ -194,9 +184,9 @@ python extract_images.py
 
 ## Author
 
-**Your Name**
+**Jonas Souza**
 
-Data Analysis | Data Science | Python
+Engenheiro Eletricista
 
 ## License
 
