@@ -1,4 +1,4 @@
-'''''''''''''''''111111 ''''''''# Christmas Songs Spotify Streaming Analysis (2017-2025)
+# Christmas Songs Spotify Streaming Analysis (2017-2025)
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
@@ -101,9 +101,22 @@ Time series analyses:
 Model selection and rationale:
 - Data suitability analysis for seasonal patterns
 - Dataset size considerations
+- ARIMA(1,1,1) model trained per week per song
+- Model validation using 2024 data
+- 2025 season forecasting
 
 **Selected Model:**
-- **ARIMA**: Time series forecasting model for seasonal streaming patterns
+- **ARIMA(1,1,1)**: Time series forecasting model for seasonal streaming patterns
+
+**Key Findings:**
+- Average MAPE of 15.5% on 2024 validation
+- Predicted growth of 12-13% for top songs in 2025
+- "It's Beginning to Look a Lot Like Christmas" shows highest growth forecast (+29.9%)
+- Only "Jingle Bell Rock" predicted to decline (-2.7%)
+
+![Model Validation](images/04_prediction_models/Model%20Validation%202024%20Actual%20vs%20ARIMA%20Predicted.png)
+
+![ARIMA Forecast 2025](images/04_prediction_models/ARIMA(1,1,1)%20Forecast%20Christmas%20Songs%202025%20Season.png)
 
 ## How to Run
 
@@ -186,7 +199,7 @@ jupyter notebook
 
 **Jonas Souza**
 
-Engenheiro Eletricista
+Electrical Engineer
 
 ## License
 
