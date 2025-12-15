@@ -114,9 +114,9 @@ Model selection and rationale:
 - "It's Beginning to Look a Lot Like Christmas" shows highest growth forecast (+29.9%)
 - Only "Jingle Bell Rock" predicted to decline (-2.7%)
 
-![Model Validation](images/04_prediction_models/Model%20Validation%202024%20Actual%20vs%20ARIMA%20Predicted.png)
+![Model Validation](images/prediction_models/Model%20Validation%202024%20Actual%20vs%20ARIMA%20Predicted.png)
 
-![ARIMA Forecast 2025](images/04_prediction_models/ARIMA(1,1,1)%20Forecast%20Christmas%20Songs%202025%20Season.png)
+![ARIMA Forecast 2025](images/prediction_models/ARIMA(1,1,1)%20Forecast%20Christmas%20Songs%202025%20Season.png)
 
 ## How to Run
 
