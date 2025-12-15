@@ -195,6 +195,12 @@ jupyter notebook
 - Method: Web scraping
 - Period: 01/01/2017 - 11/28/2025
 
+## Recognition
+
+This dataset was featured in **Kaggle's Trending Datasets**, demonstrating the community's interest in music streaming analytics and seasonal patterns analysis.
+
+![Kaggle Trending](images/trending_datasets.png)
+
 ## Author
 
 **Jonas Souza**
