@@ -35,15 +35,30 @@ Christmas_Songs_Spotify_Analysis/
 │   ├── 03_temporal_analysis.ipynb
 │   └── 04_prediction_models.ipynb
 ├── images/
+│   ├── animations/
 │   ├── data_collection/
 │   ├── exploratory_analysis/
 │   ├── temporal_analysis/
 │   └── prediction_models/
+├── scripts/
+│   └── create_animations.py
 ├── extract_images.py
 ├── README.md
 ├── LICENSE
 └── .gitignore
 ```
+
+## Animated Visualizations
+
+### Streaming Evolution Race
+Watch the competition unfold as songs accumulate total streams from 2017 to 2025:
+
+![Race Accumulated Total](images/animations/race_accumulated_total.gif)
+
+### Weekly Seasonal Growth Pattern
+See how streaming patterns evolve week by week during the Christmas season:
+
+![Growth Weekly Season](images/animations/growth_weekly_season.gif)
 
 ## Analyses Performed
 
