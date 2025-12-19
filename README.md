@@ -40,6 +40,9 @@ Christmas_Songs_Spotify_Analysis/
 │   ├── exploratory_analysis/
 │   ├── temporal_analysis/
 │   └── prediction_models/
+├── reports/                                      # 📄 
+│   ├── relatorio_analise_spotify_PT.pdf         # Portuguese PDF report
+│   ├── spotify_streaming_analysis_report_EN.pdf # English PDF report
 ├── scripts/
 │   └── create_animations.py
 ├── extract_images.py
@@ -47,6 +50,29 @@ Christmas_Songs_Spotify_Analysis/
 ├── LICENSE
 └── .gitignore
 ```
+
+## 📄 Professional Reports
+
+Comprehensive analysis reports available in both Portuguese and English:
+
+### 🇧🇷 Portuguese Version (Versão em Português)
+**PDF Report:** [relatorio_analise_spotify_PT.pdf](reports/relatorio_analise_spotify_PT.pdf) - 24 páginas
+
+### 🇺🇸 English Version
+**PDF Report:** [spotify_streaming_analysis_report_EN.pdf](reports/spotify_streaming_analysis_report_EN.pdf) - 24 pages
+
+### 📋 Report Contents
+Both versions include:
+- **Executive Summary** - Key findings and highlights
+- **Introduction** - Context, objectives, and analyzed songs
+- **Methodology** - Data collection process, tools, and technologies
+- **Exploratory Data Analysis** - Descriptive statistics, distributions, and peak identification
+- **Temporal Analysis** - Time series, seasonal patterns, CAGR, and growth trends
+- **Predictive Models** - ARIMA(1,1,1) model selection, validation, and 2025 forecasts
+- **Conclusions** - Main findings, limitations, and future work
+- **17 Professional figures** and **10 detailed tables**
+
+> **Note:** LaTeX source files (.tex) are available locally but excluded from version control via .gitignore.
 
 ## Animated Visualizations
 

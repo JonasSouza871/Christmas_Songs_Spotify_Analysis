@@ -1,1 +1,11 @@
 extract_images.py
+
+# LaTeX source files and auxiliary files in reports folder
+reports/*.tex
+reports/*.aux
+reports/*.log
+reports/*.out
+reports/*.toc
+reports/*.synctex.gz
+reports/*.fls
+reports/*.fdb_latexmk
