@@ -139,25 +139,65 @@ Time series analyses:
 ### 4. Predictive Models
 **Notebook:** `04_prediction_models.ipynb`
 
-Model selection and rationale:
-- Data suitability analysis for seasonal patterns
-- Dataset size considerations
-- ARIMA(1,1,1) model trained per week per song
-- Model validation using 2024 data
-- 2025 season forecasting
+#### Model Comparison: ARIMA vs Linear Regression
 
-**Selected Model:**
-- **ARIMA(1,1,1)**: Time series forecasting model for seasonal streaming patterns
+This analysis implements and compares two forecasting approaches:
+
+**Why Two Models?**
+- **ARIMA(1,1,1)** initially chosen for time series forecasting
+- **Linear Regression** added as simpler alternative after observing ARIMA convergence issues
+
+**ARIMA Limitations Identified:**
+- Multiple convergence warnings during training
+- Over-parameterization: 3-4 parameters competing for only 6-8 annual data points
+- Artificial time series structure (8 years per week) not ideal for complex autocorrelation modeling
+- Differencing component (d=1) reduces already small dataset further
+
+**Linear Regression Advantages:**
+- Simple trend modeling: exactly what we need for year-over-year growth
+- Only 2 parameters (intercept + slope) vs 3-4 for ARIMA
+- No convergence issues - analytical solution via least squares
+- Robust performance even with small samples
+- Easy interpretation: "each year, streams grow by X millions"
+
+**Comparative Results:**
+
+| Metric | ARIMA | Linear Regression | Winner |
+|--------|-------|-------------------|--------|
+| **Validation MAPE (2024)** | 16.0% | 15.4% | **LR** ✓ |
+| **Songs Won (out of 7)** | 3 | 4 | **LR** ✓ |
+| **2025 Total Forecast** | 1,723.40M | 1,696.55M | Similar |
+| **Convergence Issues** | Yes | No | **LR** ✓ |
+| **Interpretability** | Medium | High | **LR** ✓ |
 
 **Key Findings:**
-- Average MAPE of 15.5% on 2024 validation
-- Predicted growth of 12-13% for top songs in 2025
-- "It's Beginning to Look a Lot Like Christmas" shows highest growth forecast (+29.9%)
+- Linear Regression marginally outperforms ARIMA (15.4% vs 16.0% MAPE)
+- LR wins on 4/7 songs, particularly "Last Christmas" (+10.8% improvement) and "All I Want for Christmas Is You" (+4.9%)
+- ARIMA better for "It's Beginning to Look a Lot Like Christmas" (+11.0%), suggesting recent momentum shifts benefit from autocorrelation
+- Both models show comparable reliability (~15-16% MAPE)
+- **Conclusion**: Linear Regression chosen as final model due to simplicity, stability, and adequate accuracy without convergence complications
+
+**2025 Season Forecasts (Linear Regression):**
+- Predicted total growth of ~10-12% for top songs
+- "It's Beginning to Look a Lot Like Christmas" shows highest growth (+29.9%)
+- "Feliz Navidad" strong growth potential (+11.5%)
 - Only "Jingle Bell Rock" predicted to decline (-2.7%)
 
-![Model Validation](images/prediction_models/Model%20Validation%202024%20Actual%20vs%20ARIMA%20Predicted.png)
+**ARIMA Model Results:**
+
+![Model Validation ARIMA](images/prediction_models/Model%20Validation%202024%20Actual%20vs%20ARIMA%20Predicted.png)
 
 ![ARIMA Forecast 2025](images/prediction_models/ARIMA(1,1,1)%20Forecast%20Christmas%20Songs%202025%20Season.png)
+
+**Linear Regression Model Results:**
+
+![Model Validation Linear Regression](images/prediction_models/Model%20Validation%202024%20Actual%20vs%20Linear%20Regression%20Predicted.png)
+
+![Linear Regression Forecast 2025](images/prediction_models/Linear%20Regression%20Forecast%20Christmas%20Songs%202025%20Season.png)
+
+**Model Comparison:**
+
+![Model Comparison ARIMA vs Linear Regression](images/prediction_models/Model%20Comparison%20ARIMA%20vs%20Linear%20Regression.png)
 
 ## How to Run
 
